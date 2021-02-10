@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-gray-warm-100 font-mono leading-7;
+    @apply text-gray-warm-500;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-blackletter;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply font-normal;
+  }
+
+  h1 {
+    @apply text-rose-900 text-3xl;
+  }
+
+  h2 {
+    @apply text-gray-warm-700 text-xl;
+  }
+
+  h3 {
+    @apply text-rose-800 text-lg underline;
+  }
+
+  p {
+    @apply mb-2 leading-6;
+  }
+
+  p > a {
+    @apply bg-rose-900 bg-opacity-5 text-rose-700 underline hover:no-underline focus:no-underline active:no-underline hover:bg-opacity-20 morph;
+  }
+
+  /* a {
+    @apply underline text-gray-500 hover:no-underline focus:no-underline active:no-underline;
+  } */
+
+  code {
+    @apply px-1 py-0.5 rounded-sm bg-gray-warm-400 text-gray-warm-100;
+  }
+
+  .font-mono {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+
+    @apply font-normal;
+  }
+
+  .font-blackletter {
+    font-family: gothicus, Georgia, serif;
+
+    @apply font-normal subpixel-antialiased;
+  }
+
+  .font-title {
+    font-family: 'Carter One', Georgia, sans-serif;
+
+    @apply font-normal;
+  }
+}
+
+@layer components {
+  .article-title {
+    @apply text-rose-50 text-3xl bg-rose-900 w-screen -ml-4 pl-4 pt-0.5 pb-1 no-underline;
+  }
+
+  .article-description {
+    @apply mb-6 italic text-gray-warm-500 no-underline;
+  }
+
+  .site-header {
+    @apply flex flex-row justify-between items-center w-full my-2;
+  }
+
+  .site-title {
+    @apply text-2xl text-gray-warm-600;
+  }
+
+  .site-title a {
+    @apply no-underline hover:text-gray-warm-900;
+  }
+
+  .nuxt-content-editor {
+    @apply bg-gray-warm-900 text-gray-warm-300;
+  }
+
+  .svg-icon {
+    height: 24px;
+    width: 24px;
+
+    @apply stroke-current text-gray-warm-400 hover:text-gray-warm-700 cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .morph {
+    @apply transition duration-300 ease-in-out;
+  }
+}
